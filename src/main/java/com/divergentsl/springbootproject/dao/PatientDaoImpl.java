@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.divergentsl.springbootproject.entity.Patient;
 
 @Repository
-public class PatientDaoImpl implements PatientDao<Patient> {
+public class PatientDaoImpl implements PatientDao {
 	
 	@PersistenceContext
 	EntityManager entityManager;

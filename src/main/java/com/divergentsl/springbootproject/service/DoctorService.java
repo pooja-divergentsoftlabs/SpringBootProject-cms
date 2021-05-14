@@ -6,7 +6,7 @@ import com.divergentsl.springbootproject.entity.Doctor;
 
 public interface DoctorService {
 	
-	public void insertDoctor(String name, String fees);
+	public Doctor insertDoctor(Doctor doctor);
 
 	public Doctor findDoctor(int id);
 

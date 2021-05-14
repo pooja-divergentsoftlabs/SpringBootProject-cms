@@ -15,17 +15,7 @@ public class PatientServiceImpl implements PatientService {
 	@Autowired
 	PatientDao patientDao;
 	
-	@Override
-	@Transactional
-	public void insertPatient(String name,String address, String contactnumber) {
-		Patient patient=new Patient();
-		patient.setName(name);
-		patient.setAddress(address);
-		patient.setContactnumber(contactnumber);
-		patientDao.insert(patient);
-		
-		
-	}
+	
 
 	@Override
 	@Transactional(readOnly = true)
@@ -46,6 +36,22 @@ public class PatientServiceImpl implements PatientService {
 		
 	}
 
-	
+	@Override
+	@Transactional
+	public void insertPatient(Patient patient) {
+		patientDao.insert(patient);
+	}
+
+	/*
+	 * @Override
+	 * 
+	 * @Transactional public void insertPatient(String name,String address, String
+	 * contactnumber) { Patient patient=new Patient(); patient.setName(name);
+	 * patient.setAddress(address); patient.setContactnumber(contactnumber);
+	 * patientDao.insert(patient);
+	 * 
+	 * 
+	 * }
+	 */
 	
 }

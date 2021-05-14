@@ -17,11 +17,9 @@ public class AppointmentServiceImpl implements AppointmentService {
 
 	@Override
 	@Transactional
-	public void insertAppointment(String name, String date) {
-		Appointment appointment= new Appointment();
-		appointment.setName(name);
-		appointment.setDate(date);
+	public Appointment insertAppointment(Appointment appointment) {
 		appointmentDao.insert(appointment);
+		return appointment;
 		
 	}
 

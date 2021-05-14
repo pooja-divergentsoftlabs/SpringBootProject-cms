@@ -18,11 +18,10 @@ public class DoctorServiceImpl implements DoctorService {
 
 	@Override
 	@Transactional
-	public void insertDoctor(String name, String fees) {
-		Doctor doctor=new Doctor();
-		doctor.setName(name);
-		doctor.setFees(fees);
+	public Doctor insertDoctor(Doctor doctor) {
+		
 		doctorDao.insert(doctor);
+		return doctor;
 	}
 	@Override
 	@Transactional(readOnly = true)

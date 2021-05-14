@@ -2,13 +2,15 @@ package com.divergentsl.springbootproject.dao;
 
 import java.util.List;
 
-public interface PatientDao<T> {
+import com.divergentsl.springbootproject.entity.Patient;
 
-	public T insert(T patient);
+public interface PatientDao {
 
-	public T find(int id);
+	public Patient insert(Patient patient);
 
-	public List<T> findAll();
+	public Patient find(int id);
+
+	public List<Patient> findAll();
 
 	public void remove(int id);
 	

@@ -6,7 +6,7 @@ import com.divergentsl.springbootproject.entity.Appointment;
 
 public interface AppointmentService {
 	
-	public void insertAppointment(String name, String date);
+	public Appointment insertAppointment(Appointment appointment);
 
 	public Appointment findAppointment(int id);
 

@@ -6,7 +6,7 @@ import com.divergentsl.springbootproject.entity.Drug;
 
 public interface DrugService {
 
-	public void insertDrug(String name,String quantity);
+	public Drug insertDrug(Drug drug);
 
 	public Drug findDrug(int id);
 

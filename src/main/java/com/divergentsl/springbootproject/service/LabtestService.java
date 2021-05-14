@@ -6,7 +6,7 @@ import com.divergentsl.springbootproject.entity.Labtest;
 
 public interface LabtestService {
 	
-	public void insertLabtest(String name, String patientname);
+	public Labtest insertLabtest(Labtest labtest);
 
 	public Labtest findLabtest(int id);
 

@@ -17,11 +17,10 @@ public class DrugServiceImpl implements DrugService {
 		
 	@Override
 	@Transactional
-	public void insertDrug(String name, String quantity) {
-		Drug drug = new Drug();
-		drug.setName(name);
-		drug.setQuantity(quantity);
+	public Drug insertDrug(Drug drug) {
+		
 		drugDao.insert(drug);
+		return drug;
 		
 	}
 
